@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Praxis Dr. Dr. med. Massud Mostauli – Hausarzt in Hamburg</title>
+  <meta name="description" content="Hausarztpraxis Dr. Dr. med. Massud Mostauli – Allgemeinmedizin, Vorsorge, Notfallversorgung in Friedrich-Frank-Bogen 93, 21033 Hamburg." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --accent:#0f6cbf;
+      --accent-dark:#0a4d8c;
+      --muted:#6b7280;
+      --bg:#f7fafc;
+      --card:#ffffff;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#0f172a;line-height:1.5;scroll-behavior:smooth}
+    header{background:linear-gradient(180deg,#ffffffcc,transparent);backdrop-filter:blur(4px);position:sticky;top:0;z-index:40;border-bottom:1px solid #e6eef9}
+    .container{max-width:1100px;margin:0 auto;padding:1rem}
+    .nav{display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:.75rem;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#0b9cff);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px}
+    nav ul{display:flex;gap:1rem;list-style:none;margin:0;padding:0}
+    a{color:inherit;text-decoration:none}
+    .btn{background:var(--accent);color:white;padding:.5rem .9rem;border-radius:10px;font-weight:600;transition:background .2s}
+    .btn:hover{background:var(--accent-dark)}
+
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:2rem;align-items:start;padding:2.5rem 0}
+    .hero .kicker{color:var(--muted);font-weight:600}
+    h1{margin:.25rem 0;font-size:28px}
+    h2{font-size:24px;margin-top:2rem;margin-bottom:1rem}
+    h3{font-size:20px;margin-top:1.5rem;margin-bottom:.75rem}
+    p.lead{color:var(--muted);margin:0 0 1rem 0}
+    .card{background:var(--card);border-radius:14px;padding:1rem;box-shadow:0 6px 18px rgba(15,28,60,0.06)}
+
+    /* Leistungs-Akkordeon */
+    .accordion {background: #fff;border-radius: 10px;margin-bottom: 15px;box-shadow: 0 4px 6px rgba(0,0,0,0.1);overflow: hidden;}
+    .accordion-header {padding: 20px;cursor: pointer;font-weight: 600;display: flex;align-items: center;justify-content: space-between;background: var(--accent);color: #fff;transition: background 0.3s;}
+    .accordion-header:hover {background: var(--accent-dark);}
+    .accordion-content {max-height: 0;overflow: hidden;transition: max-height 0.3s ease;background: #ecf0f1;padding: 0 20px;}
+    .accordion-content p, .accordion-content ul {margin: 15px 0;}
+    .accordion-content ul {padding-left: 20px;}
+    .accordion-header::after {content: '+';font-size: 24px;transition: transform 0.3s;}
+    .accordion.active .accordion-header::after {transform: rotate(45deg);}
+
+    .map{height:260px;border-radius:10px;overflow:hidden}
+    .contact-grid{display:grid;grid-template-columns:1fr 320px;gap:1rem}
+
+    footer{padding:2rem 0;color:var(--muted);font-size:.9rem}
+
+    /* responsive */
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr;}
+      .contact-grid{grid-template-columns:1fr}
+      nav ul{display:none}
+    }
+
+    /* small helpers */
+    .muted{color:var(--muted)}
+    .pill{display:inline-block;padding:.25rem .5rem;background:#eef6ff;border-radius:999px;color:var(--accent);font-weight:600}
+    label{display:block;font-size:.9rem;margin-bottom:.25rem}
+    input,textarea,select{width:100%;padding:.6rem;border-radius:8px;border:1px solid #dbeafe;font-size:1rem}
+    button[type=submit]{padding:.6rem .9rem;border-radius:8px;border:0;background:var(--accent);color:white;font-weight:600;transition:background .2s}
+    button[type=submit]:hover{background:var(--accent-dark)}
+    .notice{background:#e8f3ff;padding:1rem;border-radius:10px;margin-top:1rem;font-weight:600;font-size:1.05rem;}
+    
+    /* Scroll-Padding für Anker-Links - WICHTIG für korrekte Navigation */
+    html {
+      scroll-padding-top: 100px; /* Platz für den fixierten Header */
+    }
+    
+    /* Sektionen mit zusätzlichem Padding oben für bessere Sichtbarkeit */
+    section {
+      scroll-margin-top: 100px;
+      padding-top: 20px; /* Zusätzlicher Abstand nach oben */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">MM</div>
+        <div>
+          <div style="font-weight:700">Dr. Dr. med. Massud Mostauli</div>
+          <div class="muted" style="font-size:.85rem">Hausarzt – Friedrich-Frank-Bogen 93, 21033 Hamburg</div>
+        </div>
+      </div>
+      <nav aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="#ueber">Über uns</a></li>
+          <li><a href="#leistungen">Leistungen</a></li>
+          <li><a href="#sprechzeiten">Sprechzeiten</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+      <div>
+        <a class="btn" href="#kontakt">Termin</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" role="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <div class="kicker pill">Hausarztpraxis</div>
+        <h1 id="hero-title">Herzlich willkommen in der Praxis von Dr. Dr. med. Massud Mostauli</h1>
+        <p class="lead">Ihre Hausarztpraxis in Hamburg-Wilhelmsburg: persönliche Betreuung, umfassende Allgemeinmedizin, Prävention und schnelle Hilfe im akuten Fall.</p>
+
+        <div class="card" style="margin-top:1rem">
+          <strong>Kurzprofil</strong>
+          <p class="muted" style="margin:.5rem 0 0 0">Dr. Dr. med. Massud Mostauli – Facharzt für Allgemeinmedizin. Langjährige Erfahrung in der hausärztlichen Versorgung, Schwerpunkt Vorsorge und Notfallmanagement.</p>
+          <ul style="margin:.5rem 0 0 0;padding-left:1.1rem;color:var(--muted)">
+            <li>Sprachen: Deutsch, Englisch, Paschtu, Russisch, Hindi, Urdu</li>
+            <li>Adresse: Friedrich-Frank-Bogen 93, 21033 Hamburg</li>
+            <li>Telefon: <a href="tel:+49407381144">+49 40 73 81 144</a></li>
+            <li>E-Mail: <a href="mailto:info@mostauli-praxis.de">info@mostauli-praxis.de</a></li>
+          </ul>
+        </div>
+      </div>
+      <aside>
+        <div class="card" style="text-align:center">
+          <!-- Foto platzhalter -->
+          <div style="width:100%;height:220px;border-radius:10px;background:linear-gradient(180deg,#eef8ff,#ffffff);display:flex;align-items:center;justify-content:center;margin-bottom:.75rem">
+            <div class="muted">Foto von Dr. Mostauli (Platzhalter)</div>
+          </div>
+          <div style="text-align:left">
+            <strong>Kontakt</strong>
+            <p class="muted" style="margin:.25rem 0 0 0">Friedrich-Frank-Bogen 93<br>21033 Hamburg</p>
+            <p style="margin:.25rem 0 0 0"><strong>Telefon</strong><br><a href="tel:+49407381144">+49 40 73 81 144</a></p>
+            <p style="margin:.25rem 0 0 0"><strong>E-Mail</strong><br><a href="mailto:info@mostauli-praxis.de">info@mostauli-praxis.de</a></p>
+            <a href="#kontakt" class="btn" style="display:inline-block;margin-top:.5rem">Zur Kontaktseite</a>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:1rem">
+          <strong>Sprechzeiten</strong>
+          <ul style="margin:.5rem 0 0 0;padding-left:1.1rem;color:var(--muted)">
+            <li>Mo – Fr: 08:00 – 12:00</li>
+            <li>Mo & Di: 15:00 – 18:00</li>
+            <li>und nach Vereinbarung</li>
+          </ul>
+        </div>
+      </aside>
+    </section>
+
+    <section id="ueber" style="margin-top:2rem">
+      <h2>Über uns</h2>
+      <p>Seit vielen Jahren betreut Dr. Dr. med. Massud Mostauli Patienten in Hamburg-Wilhelmsburg und Umgebung. Als Facharzt für Allgemeinmedizin bietet er eine umfassende hausärztliche Versorgung für die ganze Familie.</p>
+      <p>Durch seine langjährige Erfahrung und regelmäßige Fortbildungen gewährleistet Dr. Mostauli eine medizinisch hochwertige Betreuung auf aktuellem Stand. Besonderen Wert legt er auf eine persönliche Arzt-Patienten-Beziehung und nimmt sich Zeit für die individuellen Anliegen seiner Patienten.</p>
+    </section>
+
+    <section id="leistungen" style="margin-top:2rem">
+      <h2>Unsere Leistungen</h2>
+      <div class="columns" style="display:flex;flex-wrap:wrap;gap:20px;">
+        <!-- Linke Spalte -->
+        <div class="column" style="flex:1;min-width:300px;">
+          <div class="accordion">
+            <div class="accordion-header">Allgemeinmedizin</div>
+            <div class="accordion-content">
+              <p>Kontinuierliche Betreuung bei akuten und chronischen Erkrankungen.</p>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <div class="accordion-header">Vorsorge & Check-ups</div>
+            <div class="accordion-content">
+              <ul>
+                <li>Gesundheits-Checks</li>
+                <li>Impfungen</li>
+                <li>Krebsvorsorge</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <div class="accordion-header">Hausbesuche</div>
+            <div class="accordion-content">
+              <p>Bei Bedarf besuchen wir Patient:innen zuhause (auf Anfrage).</p>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <div class="accordion-header">Infektions- & Notfallversorgung</div>
+            <div class="accordion-content">
+              <p>Schnelle Versorgung bei Notfällen und akuten Infektionen.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rechte Spalte -->
+        <div class="column" style="flex:1;min-width:300px;">
+          <div class="accordion">
+            <div class="accordion-header">Labor & Diagnostik</div>
+            <div class="accordion-content">
+              <ul>
+                <li>Blutuntersuchungen</li>
+                <li>Urindiagnostik</li>
+                <li>EKG</li>
+                <li>Kleine Sonografie</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <div class="accordion-header">Reisemedizin</div>
+            <div class="accordion-content">
+              <ul>
+                <li>Impfberatung</li>
+                <li>Reiseimpfungen</li>
+                <li>Gesundheitscheck vor Reisen</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <div class="accordion-header">Chronikerprogramme (DMP)</div>
+            <div class="accordion-content">
+              <ul>
+                <li>Diabetes</li>
+                <li>KHK</li>
+                <li>Asthma</li>
+                <li>COPD</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <div class="accordion-header">Wundversorgung</div>
+            <div class="accordion-content">
+              <p>Behandlung akuter und chronischer Wunden.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sprechzeiten" style="margin-top:2rem">
+      <h2>Sprechzeiten</h2>
+      <div class="card">
+        <p>Wir sind zu folgenden Zeiten für Sie da:</p>
+        <ul>
+          <li><strong>Montag bis Freitag:</strong> 08:00 – 12:00 Uhr</li>
+          <li><strong>Montag und Dienstag:</strong> 15:00 – 18:00 Uhr</li>
+          <li><strong>Termine:</strong> Nach Vereinbarung auch außerhalb der regulären Sprechzeiten</li>
+        </ul>
+        <p class="muted" style="margin-top:1rem">Bitte beachten Sie, dass wir während der Sprechzeiten auch Notfälle behandeln, was zu längeren Wartezeiten führen kann.</p>
+      </div>
+    </section>
+
+    <section id="kontakt" style="margin-top:2rem">
+      <h2>Kontakt & Anfahrt</h2>
+      <div class="notice">
+        🎉 <strong>Hooopla!</strong> Sie brauchen bei uns <strong>keinen Termin</strong> – kommen Sie einfach jederzeit während der Sprechzeiten vorbei!<br>
+        <span style="color:#0f6cbf;">Wir haben extrem kurze Wartezeiten.</span><br><br>
+        📞 Tel.: <a href="tel:+49407381144">040 73 81 144</a><br>
+        <span style="font-size:.95rem;color:#4b5563;">Um auf Nummer sicher zu gehen, können Sie uns gern vorher anrufen.</span>
+      </div>
+      
+      <div class="contact-grid" style="margin-top:.75rem;">
+        <div>
+          <p class="muted">Schreiben Sie uns oder rufen Sie an – wir melden uns schnell zurück.</p>
+          <form id="contactForm" class="card" onsubmit="return submitForm(event)" aria-label="Kontaktformular">
+            <div style="margin-bottom:.6rem">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" required />
+            </div>
+            <div style="margin-bottom:.6rem">
+              <label for="phone">Telefon</label>
+              <input id="phone" name="phone" type="tel" />
+            </div>
+            <div style="margin-bottom:.6rem">
+              <label for="email">E‑Mail</label>
+              <input id="email" name="email" type="email" required />
+            </div>
+            <div style="margin-bottom:.6rem">
+              <label for="message">Nachricht / Terminwunsch</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Nachricht senden</button>
+            <p id="formMsg" class="muted" style="margin-top:.5rem;font-size:.9rem"></p>
+          </form>
+        </div>
+        <div>
+          <div class="card">
+            <strong>Unsere Adresse</strong>
+            <p class="muted" style="margin:.5rem 0 0 0">Friedrich-Frank-Bogen 93<br>21033 Hamburg</p>
+            <p style="margin:.5rem 0 0 0"><strong>Öffentliche Verkehrsmittel</strong><br class="muted">Zugang über Bus/Regionalverkehr – genaue Wegebeschreibung gern auf Anfrage.</p>
+            <div style="margin-top:.75rem" class="map">
+              <iframe title="Karte: Friedrich-Frank-Bogen 93" src="https://www.google.com/maps?q=Friedrich-Frank-Bogen%2093%2C%2021033%20Hamburg&output=embed" style="border:0;width:100%;height:100%" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+
+          <div class="card" style="margin-top:1rem">
+            <strong>Notfälle</strong>
+            <p class="muted" style="margin:.5rem 0 0 0">In lebensbedrohlichen Situationen rufen Sie bitte sofort den Notruf unter 112 an. Außerhalb der Sprechzeiten wenden Sie sich an den ärztlichen Bereitschaftsdienst: 116117.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="impressionen" style="margin-top:2rem">
+      <h2>Praxis‑Impressionen</h2>
+      <p class="muted">Ein erster Eindruck unserer Räume – Eingangsbereich, Wartezimmer und der Arzt selbst.</p>
+      <div class="praxis-gallery" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin-top:1.5rem;">
+        <div class="card" style="height:260px;display:flex;align-items:center;justify-content:center;">
+          <span class="muted">Foto 1: Praxiseingang</span>
+        </div>
+        <div class="card" style="height:260px;display:flex;align-items:center;justify-content:center;">
+          <span class="muted">Foto 2: Wartebereich</span>
+        </div>
+        <div class="card" style="height:260px;display:flex;align-items:center;justify-content:center;">
+          <span class="muted">Foto 3: Behandlungszimmer</span>
+        </div>
+        <div class="card" style="height:260px;display:flex;align-items:center;justify-content:center;">
+          <span class="muted">Foto 4: Dr. Mostauli</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="impressum" style="margin-top:2rem" class="card">
+      <h3>Impressum</h3>
+      <p class="muted" style="margin:.25rem 0 0 0">Dr. Dr. med. Massud Mostauli<br>Friedrich-Frank-Bogen 93, 21033 Hamburg<br>Telefon: +49 40 73 81 144<br>E‑Mail: info@mostauli-praxis.de</p>
+      <p class="muted" style="font-size:.85rem;margin-top:.5rem">Hinweis: Diese Seite ist ein Entwurf. Bitte prüfe alle Angaben auf Richtigkeit (Arztbezeichnungen, Kontaktdaten, behördliche Angaben für das Impressum und Datenschutz).</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap">
+      <div>© <strong>Dr. Dr. med. Massud Mostauli</strong> – Praxis in Hamburg</div>
+      <div class="muted">Made with care · Datenschutzhinweise und Impressum prüfen</div>
+    </div>
+  </footer>
+
+  <script>
+    function submitForm(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const msgEl = document.getElementById('formMsg');
+      // Diese Demo speichert nichts serverseitig. Ersetze action / AJAX-Endpunkt für Live-Einsatz.
+      msgEl.textContent = 'Danke, ' + (name||'') + '. Deine Nachricht wurde lokal erfasst. Für die Live-Seite bitte ein Server-Script ergänzen.';
+      return false;
+    }
+
+    // Akkordeon-Funktionalität
+    const accordions = document.querySelectorAll('.accordion');
+    accordions.forEach(acc => {
+      acc.querySelector('.accordion-header').addEventListener('click', () => {
+        acc.classList.toggle('active');
+        const content = acc.querySelector('.accordion-content');
+        if(acc.classList.contains('active')) {
+          content.style.maxHeight = content.scrollHeight + 'px';
+        } else {
+          content.style.maxHeight = 0;
+        }
+      });
+    });
+    
+    // Verbesserte Navigation: Scrollt zum Ziel mit Offset für Header
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+          const headerHeight = document.querySelector('header').offsetHeight;
+          const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+          
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+
+  <!-- Strukturierte Daten (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Praxis Dr. Dr. med. Massud Mostauli",
+    "image": "",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Friedrich-Frank-Bogen 93",
+      "addressLocality": "Hamburg",
+      "postalCode": "21033",
+      "addressCountry": "DE"
+    },
+    "telephone": "+49 40 73 81 144",
+    "email": "info@mostauli-praxis.de",
+    "openingHours": ["Mo-Fr 08:00-12:00","Mo 15:00-18:00","Di 15:00-18:00"]
+  }
+  </script>
+</body>
+</html>
