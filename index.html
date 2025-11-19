@@ -77,6 +77,18 @@
       scroll-margin-top: 100px;
       padding-top: 20px; /* Zusätzlicher Abstand nach oben */
     }
+    
+    /* Bild-Stile */
+    .img-container {
+      height: 260px;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+    .img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   </style>
 </head>
 <body>
@@ -123,11 +135,11 @@
       </div>
       <aside>
         <div class="card" style="text-align:center">
-          <!-- Foto platzhalter -->
-          <div style="width:100%;height:220px;border-radius:10px;background:linear-gradient(180deg,#eef8ff,#ffffff);display:flex;align-items:center;justify-content:center;margin-bottom:.75rem">
-            <div class="muted">Foto von Dr. Mostauli (Platzhalter)</div>
+          <!-- Foto von Dr. Mostauli -->
+          <div class="img-container">
+            <img src="Webseite Bilder/dr-mostauli.jpg" alt="Dr. Dr. med. Massud Mostauli">
           </div>
-          <div style="text-align:left">
+          <div style="text-align:left; margin-top: 0.75rem">
             <strong>Kontakt</strong>
             <p class="muted" style="margin:.25rem 0 0 0">Friedrich-Frank-Bogen 93<br>21033 Hamburg</p>
             <p style="margin:.25rem 0 0 0"><strong>Telefon</strong><br><a href="tel:+49407381144">+49 40 73 81 144</a></p>
@@ -306,17 +318,25 @@
       <h2>Praxis‑Impressionen</h2>
       <p class="muted">Ein erster Eindruck unserer Räume – Eingangsbereich, Wartezimmer und der Arzt selbst.</p>
       <div class="praxis-gallery" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin-top:1.5rem;">
-        <div class="card" style="height:260px;display:flex;align-items:center;justify-content:center;">
-          <span class="muted">Foto 1: Praxiseingang</span>
+        <div class="card">
+          <div class="img-container">
+            <img src="Webseite Bilder/praxis-eingang.jpg" alt="Praxiseingang">
+          </div>
         </div>
-        <div class="card" style="height:260px;display:flex;align-items:center;justify-content:center;">
-          <span class="muted">Foto 2: Wartebereich</span>
+        <div class="card">
+          <div class="img-container">
+            <img src="Webseite Bilder/wartezimmer.jpg" alt="Wartezimmer">
+          </div>
         </div>
-        <div class="card" style="height:260px;display:flex;align-items:center;justify-content:center;">
-          <span class="muted">Foto 3: Behandlungszimmer</span>
+        <div class="card">
+          <div class="img-container">
+            <img src="Webseite Bilder/behandlungszimmer.jpg" alt="Behandlungszimmer">
+          </div>
         </div>
-        <div class="card" style="height:260px;display:flex;align-items:center;justify-content:center;">
-          <span class="muted">Foto 4: Dr. Mostauli</span>
+        <div class="card">
+          <div class="img-container">
+            <img src="Webseite Bilder/dr-mostauli.jpg" alt="Dr. Mostauli">
+          </div>
         </div>
       </div>
     </section>
