@@ -31,7 +31,7 @@
     .hero{display:grid;grid-template-columns:1fr 420px;gap:2rem;align-items:start;padding:2.5rem 0}
     .hero .kicker{color:var(--muted);font-weight:600}
     h1{margin:.25rem 0;font-size:28px}
-    h2{font-size:24px;margin-top:2rem;margin-bottom:1rem}
+    h2{font-size:24px;margin-top:1rem;margin-bottom:1rem} /* Reduzierter Abstand oben */
     h3{font-size:20px;margin-top:1.5rem;margin-bottom:.75rem}
     p.lead{color:var(--muted);margin:0 0 1rem 0}
     .card{background:var(--card);border-radius:14px;padding:1rem;box-shadow:0 6px 18px rgba(15,28,60,0.06)}
@@ -117,6 +117,15 @@
     .contact-option .icon {
       font-size: 1.5rem;
     }
+    
+    /* Unterschrift Stil */
+    .signature {
+      font-style: italic;
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e2e8f0;
+      text-align: right;
+    }
   </style>
 </head>
 <body>
@@ -164,11 +173,11 @@
         <!-- Über uns direkt unter Kurzprofil mit gleicher Breite -->
         <div class="card" id="ueber" style="margin-top:1rem">
           <strong>Über uns</strong>
-          <p class="muted" style="margin:.5rem 0 0 0">Mehrsprachig ausgerichtete Hausarztpraxis mit großem Leistungsspektrum. Teilnahme am DMP Programm für Asthma bronchiale, KHK, COPD, Diabetes mellitus Typ II sowie am kassenärztlichen Notfalldienst.</p>
-          <p class="muted" style="margin:.5rem 0 0 0">LZ-RR, LZ-EKG, Lungenfunktionsuntersuchung, Psychosomatik und Altenheimversorgung.</p>
-          <p class="muted" style="margin:.5rem 0 0 0">Wir sehen, behandeln und fördern Sie als komplexe Persönlichkeit mit allen Aspekten des Seins, nicht nur Ihre Krankheit. Entscheidend ist nicht nur Ihre körperliche, sondern auch Ihre geistige und vor allem seelische Gesundheit. Durch unser individuelles Behandlungskonzept, kommen Sie wieder ins Gleichgewicht und werden gesund. Sie sind eine eigenverantwortliche Persönlichkeit die in ihrer Einzigartigkeit anerkannt und respektiert werden muss.</p>
-          <p class="muted" style="margin:.5rem 0 0 0">Diese menschliche Sichtweise und unsere fachliche Kompetenz ermöglicht es uns, Ihre körpereigenen Heilungskräfte anzuregen und zu fördern, um Sie dann aktiv und verantwortlich in den Heilungsprozess mit einzubeziehen und Ihnen die Notwendigkeit der eigenen Verantwortung für die Zukunft Ihrer Gesundheit zu vermitteln.</p>
-          <p class="muted" style="margin:.5rem 0 0 0">In diesem Sinne .... bleiben Sie gesund! </p>
+          <p class="muted" style="margin:.5rem 0 0 0">Wir sind eine mehrsprachig ausgerichtete Hausarztpraxis mit einem umfassenden Leistungsspektrum. Wir nehmen am DMP-Programm für Asthma bronchiale, KHK, COPD und Diabetes mellitus Typ II teil und sind zudem im kassenärztlichen Notfalldienst engagiert.</p>
+          <p class="muted" style="margin:.5rem 0 0 0">Zu unseren diagnostischen Leistungen gehören unter anderem Langzeit-Blutdruckmessung, Langzeit-EKG, Lungenfunktionsdiagnostik sowie psychosomatische Grundversorgung und die medizinische Betreuung von Pflegeeinrichtungen.</p>
+          <p class="muted" style="margin:.5rem 0 0 0">Wir betrachten und begleiten Sie als ganze Persönlichkeit – mit allen körperlichen, geistigen und seelischen Aspekten. Nicht nur die Krankheit steht im Vordergrund, sondern der Mensch dahinter. Unser individuelles Behandlungskonzept unterstützt Sie dabei, wieder in Ihr Gleichgewicht zu finden und gesund zu werden. Dabei respektieren wir Ihre Eigenverantwortung und Einzigartigkeit.</p>
+          <p class="muted" style="margin:.5rem 0 0 0">Unsere menschliche Haltung, verbunden mit fachlicher Kompetenz, ermöglicht es uns, Ihre natürlichen Selbstheilungskräfte zu aktivieren und Sie aktiv in Ihren Heilungsprozess einzubeziehen. Gleichzeitig möchten wir Ihnen die Bedeutung der eigenen Verantwortung für Ihre zukünftige Gesundheit vermitteln.</p>
+          <div class="signature muted">In diesem Sinne ... bleiben Sie gesund!</div>
         </div>
       </div>
       <aside>
@@ -200,7 +209,7 @@
       </aside>
     </section>
 
-    <section id="leistungen" style="margin-top:2rem">
+    <section id="leistungen" style="margin-top:1rem"> <!-- Reduzierter Abstand von 2rem auf 1rem -->
       <h2>Unsere Leistungen</h2>
       <div class="columns" style="display:flex;flex-wrap:wrap;gap:20px;">
         <!-- Linke Spalte -->
